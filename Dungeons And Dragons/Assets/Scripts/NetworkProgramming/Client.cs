@@ -34,7 +34,7 @@ public class Client : MonoBehaviour {
         unreliableChannel = cc.AddChannel(QosType.Unreliable);
 
         HostTopology hostTopology = new HostTopology(cc, MAX_CONNECTIONS);
-        hostId = NetworkTransport.AddHost(hostTopology, port);
+        hostId = NetworkTransport.AddHost(hostTopology, 0);
 
         connectionId = NetworkTransport.Connect(hostId, hostIpAddress, port, 0, out error);
 
@@ -49,6 +49,7 @@ public class Client : MonoBehaviour {
         if (!isConnected)
             return;
 
+        Debug.Log("Update Client");
         int recHostId;
         int connectionId;
         int channelId;

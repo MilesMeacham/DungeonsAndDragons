@@ -46,7 +46,7 @@ public class Connect : MonoBehaviour {
 
         Server server = hostGameObject.GetComponent<Server>();
 
-        server.Port = hostPort;
+        server.Port = port;
         server.playerName = playerName;
 
         server.CreateHost();

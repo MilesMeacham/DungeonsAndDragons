@@ -60,7 +60,8 @@ public class Server : MonoBehaviour {
             case NetworkEventType.ConnectEvent:
                 Debug.Log("Player " + connectionId + " has connected");
                 break;
-            case NetworkEventType.DataEvent: break;
+            case NetworkEventType.DataEvent:
+                break;
             case NetworkEventType.DisconnectEvent:
                 Debug.Log("Player " + connectionId + " has disconnected");
                 break;
